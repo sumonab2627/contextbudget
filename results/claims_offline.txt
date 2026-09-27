@@ -1,0 +1,39 @@
+
+CLAIMS EXTRACTION - naive vs efficient context (offline, per-model tokenizers)
+
+model                         pipeline    calls    input  output    total  saving  $/100k claims  fields   CPT*
+---------------------------------------------------------------------------------------------------------------
+Claude Sonnet 5 ~             naive           1   12,814   2,000   14,814                    n/a   24/24   1.62
+                              efficient       3    2,937     624    3,561     76%            n/a   24/24   6.74
+GPT-5 mini                    naive           1   10,725   1,799   12,524                    628   24/24   1.92
+                              efficient       3    2,757     386    3,143     75%            146   24/24   7.64
+Gemini 3.5 Flash-Lite         naive           1   12,226   2,242   14,468                    927   24/24   1.66
+                              efficient       3    3,200     463    3,663     75%            212   24/24   6.55
+Llama 3.2 3B (Ollama, local)  naive           4   20,611   3,792   24,403                      0   23/24   0.94
+                              efficient       3    2,792     387    3,179     87%              0   24/24   7.55
+
+~ = estimated (no public tokenizer; set ANTHROPIC_API_KEY for exact counts via the free count_tokens API)
+fields = fields whose evidence is fully visible in the call that produces them (necessary, not sufficient)
+CPT* = fields-with-evidence per 1k tokens; live runs report true Correctness Per Token
+
+Same text, different tokenizers (input tokens):
+  text                             Claude Sonnet 5 ~              GPT-5 mini   Gemini 3.5 Flash-Lite            Llama 3.2 3B
+  raw claim pack                       9,210 (1.15x)           8,008 (1.00x)           8,999 (1.12x)           8,093 (1.01x)
+  cleaned + routed pages               2,426 (1.01x)           2,406 (1.00x)           2,810 (1.17x)           2,444 (1.02x)
+  invoice pages only                   1,607 (0.93x)           1,727 (1.00x)           2,057 (1.19x)           1,750 (1.01x)
+  clinical narrative only                535 (1.21x)             441 (1.00x)             487 (1.10x)             453 (1.03x)
+
+Where the raw pack's tokens are (o200k) and what the efficient pipeline sends:
+  invoice                   6 pages   2,073 raw ->  1,227 sent
+  terms                     3 pages   1,736 raw ->      0 sent
+  lab_report                1 pages     851 raw ->      0 sent
+  discharge_summary         2 pages     535 raw ->    410 sent
+  privacy                   1 pages     492 raw ->      0 sent
+  claim_form_declaration    1 pages     429 raw ->      0 sent
+  pre_authorisation         1 pages     386 raw ->    152 sent
+  correspondence            1 pages     347 raw ->    118 sent
+  claim_form                1 pages     286 raw ->    223 sent
+  policy_schedule           1 pages     267 raw ->      0 sent
+  radiology                 1 pages     226 raw ->      0 sent
+  fax_cover                 1 pages     199 raw ->      0 sent
+  pharmacy                  1 pages     181 raw ->    118 sent

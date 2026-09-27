@@ -1,0 +1,15 @@
+[project]
+name = "context-budget"
+version = "0.1.0"
+description = "Token-efficient context windows: agent context budgeting and claims-document extraction across LLMs and SLMs"
+requires-python = ">=3.10"
+dependencies = ["pypdf>=4", "tiktoken>=0.7", "google-genai>=1.20", "sentencepiece"]
+
+[project.optional-dependencies]
+live = ["anthropic>=0.40", "openai>=1.50"]
+pdf = ["reportlab>=4"]
+tiktoken = ["tiktoken"]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

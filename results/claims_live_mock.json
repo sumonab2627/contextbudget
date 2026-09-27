@@ -1,0 +1,872 @@
+[
+  {
+    "model": "Claude Sonnet 5",
+    "pipeline": "naive",
+    "calls": 1,
+    "tokens_in": 12814,
+    "tokens_out": 2000,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 1.62,
+    "cost_usd": null,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "naive",
+        "task": "all",
+        "attempt": 1,
+        "tokens_in": 12814,
+        "tokens_out": 2000
+      }
+    ]
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "pipeline": "efficient",
+    "calls": 3,
+    "tokens_in": 2937,
+    "tokens_out": 624,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 6.74,
+    "cost_usd": null,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "efficient",
+        "task": "member",
+        "attempt": 1,
+        "tokens_in": 426,
+        "tokens_out": 80
+      },
+      {
+        "pipeline": "efficient",
+        "task": "clinical",
+        "attempt": 1,
+        "tokens_in": 719,
+        "tokens_out": 240
+      },
+      {
+        "pipeline": "efficient",
+        "task": "financial",
+        "attempt": 1,
+        "tokens_in": 1792,
+        "tokens_out": 304
+      }
+    ]
+  },
+  {
+    "model": "GPT-5 mini",
+    "pipeline": "naive",
+    "calls": 1,
+    "tokens_in": 10725,
+    "tokens_out": 1799,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 1.916,
+    "cost_usd": 0.00627925,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "naive",
+        "task": "all",
+        "attempt": 1,
+        "tokens_in": 10725,
+        "tokens_out": 1799
+      }
+    ]
+  },
+  {
+    "model": "GPT-5 mini",
+    "pipeline": "efficient",
+    "calls": 3,
+    "tokens_in": 2757,
+    "tokens_out": 386,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 7.636,
+    "cost_usd": 0.00146125,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "efficient",
+        "task": "member",
+        "attempt": 1,
+        "tokens_in": 337,
+        "tokens_out": 49
+      },
+      {
+        "pipeline": "efficient",
+        "task": "clinical",
+        "attempt": 1,
+        "tokens_in": 569,
+        "tokens_out": 147
+      },
+      {
+        "pipeline": "efficient",
+        "task": "financial",
+        "attempt": 1,
+        "tokens_in": 1851,
+        "tokens_out": 190
+      }
+    ]
+  },
+  {
+    "model": "Gemini 3.5 Flash-Lite",
+    "pipeline": "naive",
+    "calls": 1,
+    "tokens_in": 12226,
+    "tokens_out": 2242,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 1.659,
+    "cost_usd": 0.0092728,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "naive",
+        "task": "all",
+        "attempt": 1,
+        "tokens_in": 12226,
+        "tokens_out": 2242
+      }
+    ]
+  },
+  {
+    "model": "Gemini 3.5 Flash-Lite",
+    "pipeline": "efficient",
+    "calls": 3,
+    "tokens_in": 3200,
+    "tokens_out": 463,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 6.552,
+    "cost_usd": 0.0021175,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "efficient",
+        "task": "member",
+        "attempt": 1,
+        "tokens_in": 372,
+        "tokens_out": 58
+      },
+      {
+        "pipeline": "efficient",
+        "task": "clinical",
+        "attempt": 1,
+        "tokens_in": 627,
+        "tokens_out": 158
+      },
+      {
+        "pipeline": "efficient",
+        "task": "financial",
+        "attempt": 1,
+        "tokens_in": 2201,
+        "tokens_out": 247
+      }
+    ]
+  },
+  {
+    "model": "Llama 3.2 3B (Ollama, local)",
+    "pipeline": "naive",
+    "calls": 4,
+    "tokens_in": 20611,
+    "tokens_out": 3792,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 23,
+    "fields": 24,
+    "cpt": 0.943,
+    "cost_usd": 0.0,
+    "seconds": 0.0,
+    "missed": [
+      "totals.exceeds_pre_authorisation"
+    ],
+    "extraction": {
+      "diagnoses": [
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        },
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        }
+      ],
+      "invoices": [
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        }
+      ],
+      "member": {
+        "member_id": "MGH-7730192-01",
+        "name": "Daniel Okafor",
+        "plan": "Global Prestige Plus",
+        "policy_number": "IPMI-GB-2291847"
+      },
+      "pre_authorisation": {
+        "approved_amount": 120000.0,
+        "reference": "PA-2026-118734",
+        "status": "Approved"
+      },
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66
+      },
+      "treatment": {
+        "admission_date": "2026-08-14",
+        "attending_physician": "Dr Helen Cheung",
+        "country": "Hong Kong",
+        "discharge_date": "2026-08-18",
+        "hospital": "Lantern Bay Medical Centre"
+      }
+    },
+    "log": [
+      {
+        "pipeline": "naive",
+        "task": "chunk 1/3",
+        "attempt": 1,
+        "tokens_in": 5709,
+        "tokens_out": 1063
+      },
+      {
+        "pipeline": "naive",
+        "task": "chunk 2/3",
+        "attempt": 1,
+        "tokens_in": 5653,
+        "tokens_out": 923
+      },
+      {
+        "pipeline": "naive",
+        "task": "chunk 3/3",
+        "attempt": 1,
+        "tokens_in": 4996,
+        "tokens_out": 28
+      },
+      {
+        "pipeline": "naive",
+        "task": "merge",
+        "attempt": 1,
+        "tokens_in": 4253,
+        "tokens_out": 1778
+      }
+    ]
+  },
+  {
+    "model": "Llama 3.2 3B (Ollama, local)",
+    "pipeline": "efficient",
+    "calls": 3,
+    "tokens_in": 2792,
+    "tokens_out": 387,
+    "reasoning_tokens": 0,
+    "retries": 0,
+    "correct": 24,
+    "fields": 24,
+    "cpt": 7.55,
+    "cost_usd": 0.0,
+    "seconds": 0.0,
+    "missed": [],
+    "extraction": {
+      "member": {
+        "name": "Daniel Okafor",
+        "member_id": "MGH-7730192-01",
+        "policy_number": "IPMI-GB-2291847",
+        "plan": "Global Prestige Plus"
+      },
+      "treatment": {
+        "country": "Hong Kong",
+        "hospital": "Lantern Bay Medical Centre",
+        "admission_date": "2026-08-14",
+        "discharge_date": "2026-08-18",
+        "attending_physician": "Dr Helen Cheung"
+      },
+      "diagnoses": [
+        {
+          "icd10": "K35.80",
+          "description": "Unspecified acute appendicitis",
+          "primary": true
+        },
+        {
+          "icd10": "K66.0",
+          "description": "Peritoneal adhesions",
+          "primary": false
+        },
+        {
+          "icd10": "E11.9",
+          "description": "Type 2 diabetes mellitus without complications",
+          "primary": false
+        }
+      ],
+      "procedures": [
+        {
+          "code": "0DTJ4ZZ",
+          "description": "Laparoscopic appendicectomy",
+          "date": "2026-08-15"
+        }
+      ],
+      "pre_authorisation": {
+        "reference": "PA-2026-118734",
+        "approved_amount": 120000.0,
+        "status": "Approved"
+      },
+      "invoices": [
+        {
+          "provider": "Lantern Bay Medical Centre",
+          "invoice_number": "INV-LBMC-558201",
+          "date": "2026-08-18",
+          "amount": 76066.26
+        },
+        {
+          "provider": "Dr Marcus Lee",
+          "invoice_number": "SF-2291",
+          "date": "2026-08-20",
+          "amount": 38500.0
+        },
+        {
+          "provider": "Dr Priya Nair",
+          "invoice_number": "AN-7719",
+          "date": "2026-08-18",
+          "amount": 12800.0
+        },
+        {
+          "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+          "invoice_number": "RX-33019",
+          "date": "2026-08-18",
+          "amount": 1286.4
+        }
+      ],
+      "totals": {
+        "currency": "HKD",
+        "total_billed": 128652.66,
+        "exceeds_pre_authorisation": true
+      }
+    },
+    "log": [
+      {
+        "pipeline": "efficient",
+        "task": "member",
+        "attempt": 1,
+        "tokens_in": 339,
+        "tokens_out": 49
+      },
+      {
+        "pipeline": "efficient",
+        "task": "clinical",
+        "attempt": 1,
+        "tokens_in": 581,
+        "tokens_out": 149
+      },
+      {
+        "pipeline": "efficient",
+        "task": "financial",
+        "attempt": 1,
+        "tokens_in": 1872,
+        "tokens_out": 189
+      }
+    ]
+  }
+]

@@ -1,0 +1,281 @@
+turn,strategy,tokens,within_window,slot_documents,slot_history,slot_memory,slot_query,slot_system
+1,unbounded,13552,False,13306,0,0,45,201
+1,naive_truncation,2933,True,2687,0,0,45,201
+1,engineered,246,True,0,0,0,45,201
+1,engineered -retrieval,2933,True,2687,0,0,45,201
+1,engineered -tool_clearing,246,True,0,0,0,45,201
+1,engineered -compaction,246,True,0,0,0,45,201
+1,engineered -memory,246,True,0,0,0,45,201
+2,unbounded,13610,False,13306,76,0,27,201
+2,naive_truncation,2991,True,2687,76,0,27,201
+2,engineered,304,True,0,76,0,27,201
+2,engineered -retrieval,2991,True,2687,76,0,27,201
+2,engineered -tool_clearing,304,True,0,76,0,27,201
+2,engineered -compaction,304,True,0,76,0,27,201
+2,engineered -memory,304,True,0,76,0,27,201
+3,unbounded,15323,False,13306,1786,0,30,201
+3,naive_truncation,4704,True,2687,1786,0,30,201
+3,engineered,2063,True,0,1786,46,30,201
+3,engineered -retrieval,4750,True,2687,1786,46,30,201
+3,engineered -tool_clearing,2063,True,0,1786,46,30,201
+3,engineered -compaction,2063,True,0,1786,46,30,201
+3,engineered -memory,2017,True,0,1786,0,30,201
+4,unbounded,16909,False,13306,3346,0,56,201
+4,naive_truncation,6290,True,2687,3346,0,56,201
+4,engineered,5004,True,1355,3346,46,56,201
+4,engineered -retrieval,6349,True,2687,3359,46,56,201
+4,engineered -tool_clearing,5004,True,1355,3346,46,56,201
+4,engineered -compaction,5004,True,1355,3346,46,56,201
+4,engineered -memory,4958,True,1355,3346,0,56,201
+5,unbounded,16972,False,13306,3440,0,25,201
+5,naive_truncation,6353,True,2687,3440,0,25,201
+5,engineered,3712,True,0,3440,46,25,201
+5,engineered -retrieval,5273,True,2687,2314,46,25,201
+5,engineered -tool_clearing,3712,True,0,3440,46,25,201
+5,engineered -compaction,3712,True,0,3440,46,25,201
+5,engineered -memory,3666,True,0,3440,0,25,201
+6,unbounded,18509,False,13306,4976,0,26,201
+6,naive_truncation,6174,True,2687,3260,0,26,201
+6,engineered,3704,True,0,3431,46,26,201
+6,engineered -retrieval,5236,True,2687,2276,46,26,201
+6,engineered -tool_clearing,2523,True,0,2250,46,26,201
+6,engineered -compaction,3704,True,0,3431,46,26,201
+6,engineered -memory,3658,True,0,3431,0,26,201
+7,unbounded,20083,False,13306,6553,0,23,201
+7,naive_truncation,6165,True,2687,3254,0,23,201
+7,engineered,3863,True,0,3593,46,23,201
+7,engineered -retrieval,5172,True,2687,2215,46,23,201
+7,engineered -tool_clearing,4097,True,0,3827,46,23,201
+7,engineered -compaction,3863,True,0,3593,46,23,201
+7,engineered -memory,3817,True,0,3593,0,23,201
+8,unbounded,21471,False,13306,7938,0,26,201
+8,naive_truncation,5921,True,2687,3007,0,26,201
+8,engineered,3876,True,0,3578,71,26,201
+8,engineered -retrieval,6551,True,2687,3566,71,26,201
+8,engineered -tool_clearing,3869,True,0,3571,71,26,201
+8,engineered -compaction,3876,True,0,3578,71,26,201
+8,engineered -memory,3805,True,0,3578,0,26,201
+9,unbounded,22497,False,13306,8962,0,28,201
+9,naive_truncation,5371,True,2687,2455,0,28,201
+9,engineered,3465,True,0,3165,71,28,201
+9,engineered -retrieval,6000,True,2687,3013,71,28,201
+9,engineered -tool_clearing,4895,True,0,4595,71,28,201
+9,engineered -compaction,3465,True,0,3165,71,28,201
+9,engineered -memory,3394,True,0,3165,0,28,201
+10,unbounded,23996,False,13306,10464,0,25,201
+10,naive_truncation,5484,True,2687,2571,0,25,201
+10,engineered,3697,True,0,3400,71,25,201
+10,engineered -retrieval,6116,True,2687,3132,71,25,201
+10,engineered -tool_clearing,3431,True,0,3134,71,25,201
+10,engineered -compaction,3697,True,0,3400,71,25,201
+10,engineered -memory,3626,True,0,3400,0,25,201
+11,unbounded,25027,False,13306,11491,0,29,201
+11,naive_truncation,6515,True,2687,3598,0,29,201
+11,engineered,3838,True,0,3537,71,29,201
+11,engineered -retrieval,6123,True,2687,3135,71,29,201
+11,engineered -tool_clearing,4462,True,0,4161,71,29,201
+11,engineered -compaction,3838,True,0,3537,71,29,201
+11,engineered -memory,3767,True,0,3537,0,29,201
+12,unbounded,26611,False,13306,13079,0,25,201
+12,naive_truncation,5566,True,2687,2653,0,25,201
+12,engineered,4052,True,0,3755,71,25,201
+12,engineered -retrieval,6205,True,2687,3221,71,25,201
+12,engineered -tool_clearing,3520,True,0,3223,71,25,201
+12,engineered -compaction,4052,True,0,3755,71,25,201
+12,engineered -memory,3981,True,0,3755,0,25,201
+13,unbounded,27567,False,13306,14031,0,29,201
+13,naive_truncation,6522,True,2687,3605,0,29,201
+13,engineered,3435,True,0,3134,71,29,201
+13,engineered -retrieval,6134,True,2687,3146,71,29,201
+13,engineered -tool_clearing,3449,True,0,3148,71,29,201
+13,engineered -compaction,4111,True,0,3810,71,29,201
+13,engineered -memory,3364,True,0,3134,0,29,201
+14,unbounded,29167,False,13306,15634,0,26,201
+14,naive_truncation,5508,True,2687,2594,0,26,201
+14,engineered,3583,True,0,3285,71,26,201
+14,engineered -retrieval,6146,True,2687,3161,71,26,201
+14,engineered -tool_clearing,3461,True,0,3163,71,26,201
+14,engineered -compaction,4259,True,0,3961,71,26,201
+14,engineered -memory,3512,True,0,3285,0,26,201
+15,unbounded,30208,False,13306,16673,0,28,201
+15,naive_truncation,6549,True,2687,3633,0,28,201
+15,engineered,3802,True,0,3502,71,28,201
+15,engineered -retrieval,6235,True,2687,3248,71,28,201
+15,engineered -tool_clearing,4502,True,0,4202,71,28,201
+15,engineered -compaction,4478,True,0,4178,71,28,201
+15,engineered -memory,3731,True,0,3502,0,28,201
+16,unbounded,31722,False,13306,18190,0,25,201
+16,naive_truncation,5508,True,2687,2595,0,25,201
+16,engineered,3849,True,0,3552,71,25,201
+16,engineered -retrieval,6146,True,2687,3162,71,25,201
+16,engineered -tool_clearing,3461,True,0,3164,71,25,201
+16,engineered -compaction,4525,True,0,4228,71,25,201
+16,engineered -memory,3778,True,0,3552,0,25,201
+17,unbounded,32723,False,13306,19187,0,29,201
+17,naive_truncation,6509,True,2687,3592,0,29,201
+17,engineered,3945,True,0,3644,71,29,201
+17,engineered -retrieval,6108,True,2687,3120,71,29,201
+17,engineered -tool_clearing,4462,True,0,4161,71,29,201
+17,engineered -compaction,4621,True,0,4320,71,29,201
+17,engineered -memory,3874,True,0,3644,0,29,201
+18,unbounded,34307,False,13306,20775,0,25,201
+18,naive_truncation,5536,True,2687,2623,0,25,201
+18,engineered,4144,True,0,3847,71,25,201
+18,engineered -retrieval,6175,True,2687,3191,71,25,201
+18,engineered -tool_clearing,3490,True,0,3193,71,25,201
+18,engineered -compaction,4820,True,0,4523,71,25,201
+18,engineered -memory,4073,True,0,3847,0,25,201
+19,unbounded,35308,False,13306,21772,0,29,201
+19,naive_truncation,6537,True,2687,3620,0,29,201
+19,engineered,4278,True,0,3977,71,29,201
+19,engineered -retrieval,6179,True,2687,3191,71,29,201
+19,engineered -tool_clearing,4491,True,0,4190,71,29,201
+19,engineered -compaction,4954,True,0,4653,71,29,201
+19,engineered -memory,4207,True,0,3977,0,29,201
+20,unbounded,36893,False,13306,23360,0,26,201
+20,naive_truncation,5538,True,2687,2624,0,26,201
+20,engineered,4411,True,0,4113,71,26,201
+20,engineered -retrieval,6176,True,2687,3191,71,26,201
+20,engineered -tool_clearing,3491,True,0,3193,71,26,201
+20,engineered -compaction,5087,True,0,4789,71,26,201
+20,engineered -memory,4340,True,0,4113,0,26,201
+21,unbounded,37844,False,13306,24309,0,28,201
+21,naive_truncation,6489,True,2687,3573,0,28,201
+21,engineered,4495,True,0,4195,71,28,201
+21,engineered -retrieval,6130,True,2687,3143,71,28,201
+21,engineered -tool_clearing,4442,True,0,4142,71,28,201
+21,engineered -compaction,5171,True,0,4871,71,28,201
+21,engineered -memory,4424,True,0,4195,0,28,201
+22,unbounded,39418,False,13306,25886,0,25,201
+22,naive_truncation,5478,True,2687,2565,0,25,201
+22,engineered,4617,True,0,4320,71,25,201
+22,engineered -retrieval,6116,True,2687,3132,71,25,201
+22,engineered -tool_clearing,3431,True,0,3134,71,25,201
+22,engineered -compaction,5293,True,0,4996,71,25,201
+22,engineered -memory,4546,True,0,4320,0,25,201
+23,unbounded,40374,False,13306,26838,0,29,201
+23,naive_truncation,6434,True,2687,3517,0,29,201
+23,engineered,4758,True,0,4457,71,29,201
+23,engineered -retrieval,6123,True,2687,3135,71,29,201
+23,engineered -tool_clearing,4387,True,0,4086,71,29,201
+23,engineered -compaction,5434,True,0,5133,71,29,201
+23,engineered -memory,4687,True,0,4457,0,29,201
+24,unbounded,41928,False,13306,28396,0,25,201
+24,naive_truncation,5461,True,2687,2548,0,25,201
+24,engineered,4867,True,0,4570,71,25,201
+24,engineered -retrieval,6100,True,2687,3116,71,25,201
+24,engineered -tool_clearing,3415,True,0,3118,71,25,201
+24,engineered -compaction,5543,True,0,5246,71,25,201
+24,engineered -memory,4796,True,0,4570,0,25,201
+25,unbounded,42929,False,13306,29393,0,29,201
+25,naive_truncation,6462,True,2687,3545,0,29,201
+25,engineered,3450,True,0,3149,71,29,201
+25,engineered -retrieval,6149,True,2687,3161,71,29,201
+25,engineered -tool_clearing,4416,True,0,4115,71,29,201
+25,engineered -compaction,5722,True,0,5421,71,29,201
+25,engineered -memory,4975,True,0,4745,0,29,201
+26,unbounded,44499,False,13306,30966,0,26,201
+26,naive_truncation,5523,True,2687,2609,0,26,201
+26,engineered,3598,True,0,3300,71,26,201
+26,engineered -retrieval,6161,True,2687,3176,71,26,201
+26,engineered -tool_clearing,3476,True,0,3178,71,26,201
+26,engineered -compaction,5870,True,0,5572,71,26,201
+26,engineered -memory,3391,True,0,3164,0,26,201
+27,unbounded,45525,False,13306,31990,0,28,201
+27,naive_truncation,6549,True,2687,3633,0,28,201
+27,engineered,3757,True,0,3457,71,28,201
+27,engineered -retrieval,6190,True,2687,3203,71,28,201
+27,engineered -tool_clearing,4502,True,0,4202,71,28,201
+27,engineered -compaction,6029,True,0,5729,71,28,201
+27,engineered -memory,3550,True,0,3321,0,28,201
+28,unbounded,47054,False,13306,33522,0,25,201
+28,naive_truncation,5508,True,2687,2595,0,25,201
+28,engineered,3849,True,0,3552,71,25,201
+28,engineered -retrieval,6146,True,2687,3162,71,25,201
+28,engineered -tool_clearing,3461,True,0,3164,71,25,201
+28,engineered -compaction,6121,True,0,5824,71,25,201
+28,engineered -memory,3642,True,0,3416,0,25,201
+29,unbounded,48025,False,13306,34489,0,29,201
+29,naive_truncation,6479,True,2687,3562,0,29,201
+29,engineered,3930,True,0,3629,71,29,201
+29,engineered -retrieval,6093,True,2687,3105,71,29,201
+29,engineered -tool_clearing,4432,True,0,4131,71,29,201
+29,engineered -compaction,6202,True,0,5901,71,29,201
+29,engineered -memory,3723,True,0,3493,0,29,201
+30,unbounded,49564,False,13306,36032,0,25,201
+30,naive_truncation,5461,True,2687,2548,0,25,201
+30,engineered,4069,True,0,3772,71,25,201
+30,engineered -retrieval,6100,True,2687,3116,71,25,201
+30,engineered -tool_clearing,3415,True,0,3118,71,25,201
+30,engineered -compaction,6341,True,0,6044,71,25,201
+30,engineered -memory,3862,True,0,3636,0,25,201
+31,unbounded,50535,False,13306,36999,0,29,201
+31,naive_truncation,6432,True,2687,3515,0,29,201
+31,engineered,4203,True,0,3902,71,29,201
+31,engineered -retrieval,6104,True,2687,3116,71,29,201
+31,engineered -tool_clearing,4386,True,0,4085,71,29,201
+31,engineered -compaction,6475,True,0,6174,71,29,201
+31,engineered -memory,3996,True,0,3766,0,29,201
+32,unbounded,52180,False,13306,38647,0,26,201
+32,naive_truncation,5568,True,2687,2654,0,26,201
+32,engineered,4441,True,0,4143,71,26,201
+32,engineered -retrieval,6206,True,2687,3221,71,26,201
+32,engineered -tool_clearing,3521,True,0,3223,71,26,201
+32,engineered -compaction,6542,True,0,6244,71,26,201
+32,engineered -memory,4234,True,0,4007,0,26,201
+33,unbounded,53206,False,13306,39671,0,28,201
+33,naive_truncation,6566,True,2687,3650,0,28,201
+33,engineered,4630,True,0,4330,71,28,201
+33,engineered -retrieval,6265,True,2687,3278,71,28,201
+33,engineered -tool_clearing,4547,True,0,4247,71,28,201
+33,engineered -compaction,6563,True,0,6263,71,28,201
+33,engineered -memory,4423,True,0,4194,0,28,201
+34,unbounded,54690,False,13306,41158,0,25,201
+34,naive_truncation,5463,True,2687,2550,0,25,201
+34,engineered,4602,True,0,4305,71,25,201
+34,engineered -retrieval,6101,True,2687,3117,71,25,201
+34,engineered -tool_clearing,3416,True,0,3119,71,25,201
+34,engineered -compaction,6535,True,0,6238,71,25,201
+34,engineered -memory,4395,True,0,4169,0,25,201
+35,unbounded,55691,False,13306,42155,0,29,201
+35,naive_truncation,6464,True,2687,3547,0,29,201
+35,engineered,4713,True,0,4412,71,29,201
+35,engineered -retrieval,6078,True,2687,3090,71,29,201
+35,engineered -tool_clearing,4417,True,0,4116,71,29,201
+35,engineered -compaction,6565,True,0,6264,71,29,201
+35,engineered -memory,4506,True,0,4276,0,29,201
+36,unbounded,57200,False,13306,43668,0,25,201
+36,naive_truncation,5461,True,2687,2548,0,25,201
+36,engineered,4867,True,0,4570,71,25,201
+36,engineered -retrieval,6100,True,2687,3116,71,25,201
+36,engineered -tool_clearing,3415,True,0,3118,71,25,201
+36,engineered -compaction,6568,True,0,6271,71,25,201
+36,engineered -memory,4660,True,0,4434,0,25,201
+37,unbounded,58231,False,13306,44695,0,29,201
+37,naive_truncation,6492,True,2687,3575,0,29,201
+37,engineered,3435,True,0,3134,71,29,201
+37,engineered -retrieval,6134,True,2687,3146,71,29,201
+37,engineered -tool_clearing,4446,True,0,4145,71,29,201
+37,engineered -compaction,6558,True,0,6257,71,29,201
+37,engineered -memory,4824,True,0,4594,0,29,201
+38,unbounded,59721,False,13306,46193,0,21,201
+38,naive_truncation,5473,True,2687,2564,0,21,201
+38,engineered,3548,True,0,3255,71,21,201
+38,engineered -retrieval,6111,True,2687,3131,71,21,201
+38,engineered -tool_clearing,3426,True,0,3133,71,21,201
+38,engineered -compaction,6553,True,0,6260,71,21,201
+38,engineered -memory,4937,True,0,4715,0,21,201
+39,unbounded,60716,False,13306,47186,0,23,201
+39,naive_truncation,6468,True,2687,3557,0,23,201
+39,engineered,3646,True,0,3351,71,23,201
+39,engineered -retrieval,6079,True,2687,3097,71,23,201
+39,engineered -tool_clearing,4421,True,0,4126,71,23,201
+39,engineered -compaction,6536,True,0,6241,71,23,201
+39,engineered -memory,3309,True,0,3085,0,23,201
+40,unbounded,62271,False,13306,48738,0,26,201
+40,naive_truncation,5498,True,2687,2584,0,26,201
+40,engineered,3839,True,0,3541,71,26,201
+40,engineered -retrieval,6136,True,2687,3151,71,26,201
+40,engineered -tool_clearing,3451,True,0,3153,71,26,201
+40,engineered -compaction,6564,True,0,6266,71,26,201
+40,engineered -memory,3502,True,0,3275,0,26,201

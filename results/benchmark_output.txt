@@ -1,0 +1,34 @@
+
+Context window 8,000 -> input budget 6,600 (1,000 reserved for output, 5% safety margin) | tokenizer: heuristic
+Session: 40 turns, 40 knowledge-base documents
+
+strategy                     total in  mean/req    peak  over    answerable  new sess  compact
+----------------------------------------------------------------------------------------------
+unbounded                   1,494,056    37,351  62,271    40      0/15 (  0%)       0/3        0
+naive_truncation              232,403     5,810   6,566     0      3/15 ( 20%)       0/3        0
+engineered                    152,585     3,815   5,004     0     15/15 (100%)       2/3        3
+engineered -retrieval         235,620     5,890   6,551     0      9/15 ( 60%)       2/3       38
+engineered -tool_clearing     147,756     3,694   5,004     0     15/15 (100%)       2/3       19
+engineered -compaction        197,864     4,947   6,568     0     12/15 ( 80%)       2/3        0
+engineered -memory            152,500     3,812   4,975     0     15/15 (100%)       0/3        3
+
+answerable = all facts needed are in the context AND the request fits the window.
+over = requests that exceed the window (the API would reject them).
+
+Per question (final checkpoint, turn 40):
+  question      kind                      unbnd    naive      eng -retriev -tool_cl -compact  -memory
+  root_cause    early finding              over        -      yes      yes      yes      yes      yes
+  decision      user decision              over        -      yes      yes      yes        -      yes
+  batches       agent note                 over        -      yes      yes      yes      yes      yes
+  queue         recent tool result         over      yes      yes      yes      yes      yes      yes
+  kb_dental     knowledge base             over      yes      yes      yes      yes      yes      yes
+  kb_maternity  knowledge base             over        -      yes        -      yes      yes      yes
+  kb_physio     knowledge base             over        -      yes        -      yes      yes      yes
+  kb_oncology   knowledge base             over        -      yes        -      yes      yes      yes
+  p99           old raw tool output        over        -      yes        -      yes        -      yes
+
+Per question (new session, notes only):
+  question      kind                      unbnd    naive      eng -retriev -tool_cl -compact  -memory
+  root_cause    early finding              over        -      yes      yes      yes      yes        -
+  batches       agent note                 over        -      yes      yes      yes      yes        -
+  decision      user decision              over        -        -        -        -        -        -

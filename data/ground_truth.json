@@ -1,0 +1,157 @@
+{
+  "expected": {
+    "member": {
+      "name": "Daniel Okafor",
+      "member_id": "MGH-7730192-01",
+      "policy_number": "IPMI-GB-2291847",
+      "plan": "Global Prestige Plus"
+    },
+    "treatment": {
+      "country": "Hong Kong",
+      "hospital": "Lantern Bay Medical Centre",
+      "admission_date": "2026-08-14",
+      "discharge_date": "2026-08-18",
+      "attending_physician": "Dr Helen Cheung"
+    },
+    "diagnoses": [
+      {
+        "icd10": "K35.80",
+        "description": "Unspecified acute appendicitis",
+        "primary": true
+      },
+      {
+        "icd10": "K66.0",
+        "description": "Peritoneal adhesions",
+        "primary": false
+      },
+      {
+        "icd10": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "primary": false
+      }
+    ],
+    "procedures": [
+      {
+        "code": "0DTJ4ZZ",
+        "description": "Laparoscopic appendicectomy",
+        "date": "2026-08-15"
+      }
+    ],
+    "pre_authorisation": {
+      "reference": "PA-2026-118734",
+      "approved_amount": 120000.0,
+      "status": "Approved"
+    },
+    "invoices": [
+      {
+        "provider": "Lantern Bay Medical Centre",
+        "invoice_number": "INV-LBMC-558201",
+        "date": "2026-08-18",
+        "amount": 76066.26
+      },
+      {
+        "provider": "Dr Marcus Lee",
+        "invoice_number": "SF-2291",
+        "date": "2026-08-20",
+        "amount": 38500.0
+      },
+      {
+        "provider": "Dr Priya Nair",
+        "invoice_number": "AN-7719",
+        "date": "2026-08-18",
+        "amount": 12800.0
+      },
+      {
+        "provider": "Lantern Bay Medical Centre Outpatient Pharmacy",
+        "invoice_number": "RX-33019",
+        "date": "2026-08-18",
+        "amount": 1286.4
+      }
+    ],
+    "totals": {
+      "currency": "HKD",
+      "total_billed": 128652.66,
+      "exceeds_pre_authorisation": true
+    }
+  },
+  "evidence": {
+    "member.name": [
+      "Member name: Daniel Okafor"
+    ],
+    "member.member_id": [
+      "MGH-7730192-01"
+    ],
+    "member.policy_number": [
+      "IPMI-GB-2291847"
+    ],
+    "member.plan": [
+      "Global Prestige Plus"
+    ],
+    "treatment.country": [
+      "Country of treatment: Hong Kong"
+    ],
+    "treatment.hospital": [
+      "Lantern Bay Medical Centre"
+    ],
+    "treatment.admission_date": [
+      "Date of admission: 14 August 2026"
+    ],
+    "treatment.discharge_date": [
+      "Date of discharge: 18 August 2026"
+    ],
+    "treatment.attending_physician": [
+      "Attending physician: Dr Helen Cheung"
+    ],
+    "diagnoses.K35.80": [
+      "Primary: K35.80"
+    ],
+    "diagnoses.K66.0": [
+      "K66.0"
+    ],
+    "diagnoses.E11.9": [
+      "E11.9"
+    ],
+    "procedures.0DTJ4ZZ": [
+      "0DTJ4ZZ"
+    ],
+    "pre_authorisation.reference": [
+      "Pre-authorisation reference: PA-2026-118734"
+    ],
+    "pre_authorisation.approved_amount": [
+      "Approved amount: HKD 120,000.00"
+    ],
+    "pre_authorisation.status": [
+      "Status: Approved"
+    ],
+    "invoices.INV-LBMC-558201": [
+      "Invoice total: HKD 76,066.26"
+    ],
+    "invoices.SF-2291": [
+      "Invoice number: SF-2291",
+      "Invoice SF-2291 replaces SF-2290"
+    ],
+    "invoices.AN-7719": [
+      "Total due: HKD 12,800.00"
+    ],
+    "invoices.RX-33019": [
+      "Total paid: HKD 1,286.40"
+    ],
+    "invoices.no_superseded": [
+      "Invoice SF-2291 replaces SF-2290"
+    ],
+    "totals.currency": [
+      "HKD"
+    ],
+    "totals.total_billed": [
+      "Invoice total: HKD 76,066.26",
+      "Invoice SF-2291 replaces SF-2290",
+      "Total due: HKD 12,800.00",
+      "Total paid: HKD 1,286.40",
+      "Total due: HKD 38,500.00"
+    ],
+    "totals.exceeds_pre_authorisation": [
+      "Approved amount: HKD 120,000.00",
+      "Invoice total: HKD 76,066.26"
+    ]
+  }
+}

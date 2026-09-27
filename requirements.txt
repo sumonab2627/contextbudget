@@ -1,0 +1,13 @@
+# Offline claims demo
+pypdf>=4
+reportlab>=4          # only to regenerate the synthetic claim pack
+tiktoken>=0.7         # GPT (o200k) and Llama 3 tokenizers
+google-genai>=1.20    # Gemini local tokenizer + Gemini live calls
+sentencepiece         # used by the Gemini local tokenizer
+# Live runs (install what you use)
+anthropic>=0.40
+openai>=1.50
+# Tests
+pytest
+# Optional: litellm bundles the o200k tokenizer file, useful on locked-down networks
+# litellm

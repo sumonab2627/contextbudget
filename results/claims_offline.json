@@ -1,0 +1,351 @@
+{
+  "generated": "2026-09-27 19:51",
+  "rows": [
+    {
+      "model": "Claude Sonnet 5",
+      "key": "claude",
+      "size_class": "frontier LLM",
+      "window": 200000,
+      "tokenizer": "heuristic estimate",
+      "exact_tokens": false,
+      "pipeline": "naive",
+      "calls": 1,
+      "tokens_in": 12814,
+      "tokens_out": 2000,
+      "tokens_total": 14814,
+      "cost_usd": null,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 1.62,
+      "call_detail": [
+        {
+          "task": "all",
+          "in": 12814,
+          "out": 2000
+        }
+      ]
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "key": "claude",
+      "size_class": "frontier LLM",
+      "window": 200000,
+      "tokenizer": "heuristic estimate",
+      "exact_tokens": false,
+      "pipeline": "efficient",
+      "calls": 3,
+      "tokens_in": 2937,
+      "tokens_out": 624,
+      "tokens_total": 3561,
+      "cost_usd": null,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 6.74,
+      "call_detail": [
+        {
+          "task": "member",
+          "in": 426,
+          "out": 80
+        },
+        {
+          "task": "clinical",
+          "in": 719,
+          "out": 240
+        },
+        {
+          "task": "financial",
+          "in": 1792,
+          "out": 304
+        }
+      ]
+    },
+    {
+      "model": "GPT-5 mini",
+      "key": "gpt",
+      "size_class": "small frontier LLM",
+      "window": 400000,
+      "tokenizer": "o200k_base",
+      "exact_tokens": true,
+      "pipeline": "naive",
+      "calls": 1,
+      "tokens_in": 10725,
+      "tokens_out": 1799,
+      "tokens_total": 12524,
+      "cost_usd": 0.00627925,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 1.916,
+      "call_detail": [
+        {
+          "task": "all",
+          "in": 10725,
+          "out": 1799
+        }
+      ]
+    },
+    {
+      "model": "GPT-5 mini",
+      "key": "gpt",
+      "size_class": "small frontier LLM",
+      "window": 400000,
+      "tokenizer": "o200k_base",
+      "exact_tokens": true,
+      "pipeline": "efficient",
+      "calls": 3,
+      "tokens_in": 2757,
+      "tokens_out": 386,
+      "tokens_total": 3143,
+      "cost_usd": 0.00146125,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 7.636,
+      "call_detail": [
+        {
+          "task": "member",
+          "in": 337,
+          "out": 49
+        },
+        {
+          "task": "clinical",
+          "in": 569,
+          "out": 147
+        },
+        {
+          "task": "financial",
+          "in": 1851,
+          "out": 190
+        }
+      ]
+    },
+    {
+      "model": "Gemini 3.5 Flash-Lite",
+      "key": "gemini",
+      "size_class": "small frontier LLM",
+      "window": 1048576,
+      "tokenizer": "Gemini local tokenizer (Gemma 3 vocab)",
+      "exact_tokens": true,
+      "pipeline": "naive",
+      "calls": 1,
+      "tokens_in": 12226,
+      "tokens_out": 2242,
+      "tokens_total": 14468,
+      "cost_usd": 0.0092728,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 1.659,
+      "call_detail": [
+        {
+          "task": "all",
+          "in": 12226,
+          "out": 2242
+        }
+      ]
+    },
+    {
+      "model": "Gemini 3.5 Flash-Lite",
+      "key": "gemini",
+      "size_class": "small frontier LLM",
+      "window": 1048576,
+      "tokenizer": "Gemini local tokenizer (Gemma 3 vocab)",
+      "exact_tokens": true,
+      "pipeline": "efficient",
+      "calls": 3,
+      "tokens_in": 3200,
+      "tokens_out": 463,
+      "tokens_total": 3663,
+      "cost_usd": 0.0021175,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 6.552,
+      "call_detail": [
+        {
+          "task": "member",
+          "in": 372,
+          "out": 58
+        },
+        {
+          "task": "clinical",
+          "in": 627,
+          "out": 158
+        },
+        {
+          "task": "financial",
+          "in": 2201,
+          "out": 247
+        }
+      ]
+    },
+    {
+      "model": "Llama 3.2 3B (Ollama, local)",
+      "key": "slm",
+      "size_class": "SLM, local",
+      "window": 8192,
+      "tokenizer": "llama3 (128k vocab)",
+      "exact_tokens": true,
+      "pipeline": "naive",
+      "calls": 4,
+      "tokens_in": 20611,
+      "tokens_out": 3792,
+      "tokens_total": 24403,
+      "cost_usd": 0.0,
+      "fields_with_evidence": 23,
+      "fields": 24,
+      "evidence_per_1k_tokens": 0.943,
+      "call_detail": [
+        {
+          "task": "chunk 1/3",
+          "in": 5709,
+          "out": 1063
+        },
+        {
+          "task": "chunk 2/3",
+          "in": 5653,
+          "out": 923
+        },
+        {
+          "task": "chunk 3/3",
+          "in": 4996,
+          "out": 28
+        },
+        {
+          "task": "merge",
+          "in": 4253,
+          "out": 1778
+        }
+      ]
+    },
+    {
+      "model": "Llama 3.2 3B (Ollama, local)",
+      "key": "slm",
+      "size_class": "SLM, local",
+      "window": 8192,
+      "tokenizer": "llama3 (128k vocab)",
+      "exact_tokens": true,
+      "pipeline": "efficient",
+      "calls": 3,
+      "tokens_in": 2792,
+      "tokens_out": 387,
+      "tokens_total": 3179,
+      "cost_usd": 0.0,
+      "fields_with_evidence": 24,
+      "fields": 24,
+      "evidence_per_1k_tokens": 7.55,
+      "call_detail": [
+        {
+          "task": "member",
+          "in": 339,
+          "out": 49
+        },
+        {
+          "task": "clinical",
+          "in": 581,
+          "out": 149
+        },
+        {
+          "task": "financial",
+          "in": 1872,
+          "out": 189
+        }
+      ]
+    }
+  ],
+  "tokenizer_effect": {
+    "raw claim pack": {
+      "Claude Sonnet 5 ~": 9210,
+      "GPT-5 mini": 8008,
+      "Gemini 3.5 Flash-Lite": 8999,
+      "Llama 3.2 3B (Ollama, local)": 8093
+    },
+    "cleaned + routed pages": {
+      "Claude Sonnet 5 ~": 2426,
+      "GPT-5 mini": 2406,
+      "Gemini 3.5 Flash-Lite": 2810,
+      "Llama 3.2 3B (Ollama, local)": 2444
+    },
+    "invoice pages only": {
+      "Claude Sonnet 5 ~": 1607,
+      "GPT-5 mini": 1727,
+      "Gemini 3.5 Flash-Lite": 2057,
+      "Llama 3.2 3B (Ollama, local)": 1750
+    },
+    "clinical narrative only": {
+      "Claude Sonnet 5 ~": 535,
+      "GPT-5 mini": 441,
+      "Gemini 3.5 Flash-Lite": 487,
+      "Llama 3.2 3B (Ollama, local)": 453
+    }
+  },
+  "pack_breakdown_o200k": {
+    "fax_cover": {
+      "pages": 1,
+      "raw_tokens": 199,
+      "sent_tokens": 0
+    },
+    "claim_form": {
+      "pages": 1,
+      "raw_tokens": 286,
+      "sent_tokens": 223
+    },
+    "claim_form_declaration": {
+      "pages": 1,
+      "raw_tokens": 429,
+      "sent_tokens": 0
+    },
+    "pre_authorisation": {
+      "pages": 1,
+      "raw_tokens": 386,
+      "sent_tokens": 152
+    },
+    "discharge_summary": {
+      "pages": 2,
+      "raw_tokens": 535,
+      "sent_tokens": 410
+    },
+    "lab_report": {
+      "pages": 1,
+      "raw_tokens": 851,
+      "sent_tokens": 0
+    },
+    "radiology": {
+      "pages": 1,
+      "raw_tokens": 226,
+      "sent_tokens": 0
+    },
+    "invoice": {
+      "pages": 6,
+      "raw_tokens": 2073,
+      "sent_tokens": 1227
+    },
+    "pharmacy": {
+      "pages": 1,
+      "raw_tokens": 181,
+      "sent_tokens": 118
+    },
+    "correspondence": {
+      "pages": 1,
+      "raw_tokens": 347,
+      "sent_tokens": 118
+    },
+    "policy_schedule": {
+      "pages": 1,
+      "raw_tokens": 267,
+      "sent_tokens": 0
+    },
+    "terms": {
+      "pages": 3,
+      "raw_tokens": 1736,
+      "sent_tokens": 0
+    },
+    "privacy": {
+      "pages": 1,
+      "raw_tokens": 492,
+      "sent_tokens": 0
+    }
+  },
+  "prices": {
+    "claude": "verify",
+    "gpt": "developers.openai.com/api/docs/models/gpt-5-mini (27 Sep 2026)",
+    "gemini": "ai.google.dev/gemini-api/docs/pricing (27 Sep 2026)",
+    "slm": "local inference - no per-token fee"
+  }
+}

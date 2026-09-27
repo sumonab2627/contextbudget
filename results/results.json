@@ -1,0 +1,1370 @@
+{
+  "plan": {
+    "context_window": 8000,
+    "output_reserve": 1000,
+    "safety_margin": 0.05,
+    "memory_max": 500,
+    "retrieval_max": 1800,
+    "compaction_trigger": 0.75,
+    "keep_recent_messages": 6,
+    "keep_recent_tool_results": 2,
+    "input_budget": 6600
+  },
+  "tokenizer": "heuristic",
+  "turns": 40,
+  "summary": [
+    {
+      "strategy": "unbounded",
+      "requests": 40,
+      "total_input_tokens": 1494056,
+      "mean_tokens": 37351,
+      "peak_tokens": 62271,
+      "requests_over_window": 40,
+      "questions": 15,
+      "answerable": 0,
+      "answerable_pct": 0.0,
+      "new_session_answerable": "0/3",
+      "compactions": 0
+    },
+    {
+      "strategy": "naive_truncation",
+      "requests": 40,
+      "total_input_tokens": 232403,
+      "mean_tokens": 5810,
+      "peak_tokens": 6566,
+      "requests_over_window": 0,
+      "questions": 15,
+      "answerable": 3,
+      "answerable_pct": 20.0,
+      "new_session_answerable": "0/3",
+      "compactions": 0
+    },
+    {
+      "strategy": "engineered",
+      "requests": 40,
+      "total_input_tokens": 152585,
+      "mean_tokens": 3815,
+      "peak_tokens": 5004,
+      "requests_over_window": 0,
+      "questions": 15,
+      "answerable": 15,
+      "answerable_pct": 100.0,
+      "new_session_answerable": "2/3",
+      "compactions": 3
+    },
+    {
+      "strategy": "engineered -retrieval",
+      "requests": 40,
+      "total_input_tokens": 235620,
+      "mean_tokens": 5890,
+      "peak_tokens": 6551,
+      "requests_over_window": 0,
+      "questions": 15,
+      "answerable": 9,
+      "answerable_pct": 60.0,
+      "new_session_answerable": "2/3",
+      "compactions": 38
+    },
+    {
+      "strategy": "engineered -tool_clearing",
+      "requests": 40,
+      "total_input_tokens": 147756,
+      "mean_tokens": 3694,
+      "peak_tokens": 5004,
+      "requests_over_window": 0,
+      "questions": 15,
+      "answerable": 15,
+      "answerable_pct": 100.0,
+      "new_session_answerable": "2/3",
+      "compactions": 19
+    },
+    {
+      "strategy": "engineered -compaction",
+      "requests": 40,
+      "total_input_tokens": 197864,
+      "mean_tokens": 4947,
+      "peak_tokens": 6568,
+      "requests_over_window": 0,
+      "questions": 15,
+      "answerable": 12,
+      "answerable_pct": 80.0,
+      "new_session_answerable": "2/3",
+      "compactions": 0
+    },
+    {
+      "strategy": "engineered -memory",
+      "requests": 40,
+      "total_input_tokens": 152500,
+      "mean_tokens": 3812,
+      "peak_tokens": 4975,
+      "requests_over_window": 0,
+      "questions": 15,
+      "answerable": 15,
+      "answerable_pct": 100.0,
+      "new_session_answerable": "0/3",
+      "compactions": 3
+    }
+  ],
+  "checks": [
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 27574,
+      "within_window": false
+    },
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6529,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4118,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6141,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4483,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4118,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4047,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 27574,
+      "within_window": false
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6529,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4118,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6141,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4483,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4118,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4047,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 27566,
+      "within_window": false
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6521,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4110,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6133,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4475,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4110,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4039,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 27572,
+      "within_window": false
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "naive_truncation",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6527,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4774,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6139,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4788,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5450,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4703,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 27569,
+      "within_window": false
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6524,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3776,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6136,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3790,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4452,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3705,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 27566,
+      "within_window": false
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6521,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3434,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6133,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3448,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -compaction",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 4110,
+      "within_window": true
+    },
+    {
+      "checkpoint": 12,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3363,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62316,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5543,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3884,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5217,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3496,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6511,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3547,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62316,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5543,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3884,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5217,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3496,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -compaction",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6511,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3547,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62308,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5535,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3876,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5209,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3488,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6503,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3539,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62304,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "naive_truncation",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5531,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3872,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5205,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3484,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6499,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "queue",
+      "kind": "recent tool result",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3535,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62314,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "naive_truncation",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5541,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5216,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 5215,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4828,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6510,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_dental",
+      "kind": "knowledge base",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4879,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62311,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5538,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4218,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5212,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3830,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6561,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_maternity",
+      "kind": "knowledge base",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3881,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62314,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5541,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4214,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5215,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3826,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6557,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_physio",
+      "kind": "knowledge base",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3877,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62318,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5545,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 4212,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5219,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3824,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 6555,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "kb_oncology",
+      "kind": "knowledge base",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3875,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "unbounded",
+      "facts_present": 1.0,
+      "answerable": false,
+      "tokens": 62308,
+      "within_window": false
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5535,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3876,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 5209,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3488,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -compaction",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 6503,
+      "within_window": true
+    },
+    {
+      "checkpoint": 40,
+      "qid": "p99",
+      "kind": "old raw tool output",
+      "strategy": "engineered -memory",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 3539,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "unbounded",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 13543,
+      "within_window": false
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "unbounded",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 13535,
+      "within_window": false
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "unbounded",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 13543,
+      "within_window": false
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 2924,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 2916,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "naive_truncation",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 2924,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 308,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 300,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 308,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 2995,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -retrieval",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 2987,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -retrieval",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 2995,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 308,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 300,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -tool_clearing",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 308,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 308,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -compaction",
+      "facts_present": 1.0,
+      "answerable": true,
+      "tokens": 300,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -compaction",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 308,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "root_cause",
+      "kind": "early finding",
+      "strategy": "engineered -memory",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 237,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "batches",
+      "kind": "agent note",
+      "strategy": "engineered -memory",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 229,
+      "within_window": true
+    },
+    {
+      "checkpoint": "S2",
+      "qid": "decision",
+      "kind": "user decision",
+      "strategy": "engineered -memory",
+      "facts_present": 0.0,
+      "answerable": false,
+      "tokens": 237,
+      "within_window": true
+    }
+  ]
+}
